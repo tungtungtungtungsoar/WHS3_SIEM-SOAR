@@ -1,0 +1,8 @@
+
+<!-- 109998 -->
+<decoder name="mysql-login-success">
+    <prematch>Connect</prematch>
+    <regex>
+        ^\\d{4}-\\d{2}-\\d{2}T[\\d:.]+Z\\s+\\d+\\s+Connect\\s+([a-zA-Z0-9_\\-]+)@([a-zA-Z0-9_\\-.]+)</regex>
+    <order>user, srcip</order>
+</decoder>

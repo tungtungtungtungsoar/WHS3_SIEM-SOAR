@@ -1,0 +1,18 @@
+
+<!--109997,109996 -->
+<!-- Outbound SSH 감지 -->
+<group>
+    <decoder name="bastion_outbound_ssh_execve">
+        <prematch>type=EXECVE</prematch>
+        <regex>a3="?ubuntu@(\d+\.\d+\.\d+\.\d+)"</regex>
+        <order>dstip</order>
+    </decoder>
+
+    <!-- Inbound SSH 감지 -->
+    <decoder name="bastion_ssh_accepted">
+        <program_name>sshd</program_name>
+        <prematch>Accepted publickey for</prematch>
+        <regex>Accepted publickey for .* from (\d+\.\d+\.\d+\.\d+)</regex>
+        <order>srcip</order>
+    </decoder>
+</group>

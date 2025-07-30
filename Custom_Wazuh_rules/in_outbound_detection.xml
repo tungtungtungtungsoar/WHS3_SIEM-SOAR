@@ -1,0 +1,40 @@
+<group name="bastion_ssh_correlation">
+
+    <!-- Inbound SSH: Accepted publickey 감지 -->
+    <rule id="109997" level="16">
+        <decoded_as>bastion_ssh_accepted</decoded_as>
+        <description>Inbound SSH accepted (base rule)</description>
+        <group>bastion,ssh,inbound</group>
+        <mitre>
+            <id>T1078</id>         <!-- Valid Accounts -->
+            <id>T1078.004</id>     <!-- Valid Accounts: SSH -->
+        </mitre>
+        <match>Accepted publickey</match>
+    </rule>
+
+    <rule id="109996" level="15">
+        <decoded_as>bastion_outbound_ssh_execve</decoded_as>
+        <match>ubuntu@</match>
+        <description>Detected SSH command execution from Bastion Host</description>
+        <group>bastion,ssh,outbound</group>
+        <mitre>
+            <id>T1021</id>         <!-- Remote Services -->
+            <id>T1021.004</id>     <!-- Remote Services: SSH -->
+        </mitre>
+    </rule>
+
+
+    <!-- Correlation Rule: Inbound + Outbound 연속 발생 <rule id="119999" level="16">
+<if_sid>109997</if_sid>
+<if_matched_sid>109996</if_matched_sid>
+<description>Correlation: Bastion inbound + outbound SSH activity</description>
+<group>bastion,ssh,correlated</group>
+same_source_ip 제거
+<mitre>
+<id>T1078</id>
+<id>T1078.004</id>
+</mitre>
+</rule>
+-->
+
+</group>   

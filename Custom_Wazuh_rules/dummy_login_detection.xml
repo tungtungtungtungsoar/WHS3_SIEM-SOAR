@@ -1,0 +1,12 @@
+<group name="mysql_dummy_login, mysql, authentication_success">
+    <rule id="109998" level="16">
+        <decoded_as>mysql-login-success</decoded_as>
+        <description>MySQL login succeeded for admln account</description>
+        <match>admln</match>
+        <mitre>
+            <id>T1078</id>
+            <id>T1078.002</id>
+            <id>T1556.004</id>
+        </mitre>
+    </rule>
+</group>

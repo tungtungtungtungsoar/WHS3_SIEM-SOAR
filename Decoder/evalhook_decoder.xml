@@ -1,0 +1,5 @@
+<decoder name="evalhook-detect">
+    <prematch>^evalhook-detect</prematch>
+    <regex type="pcre2">^evalhook-detect FILE=([^\s]+)\s+PATTERNS=([a-zA-Z0-9_,]+)</regex>
+    <order>file, pattern</order>
+</decoder>

@@ -1,0 +1,8 @@
+<rule id="100503" level="12">
+    <decoded_as>evalhook-detect</decoded_as>
+    <description>[evalhook] Webshell detected at $(file), patterns: $(pattern)</description>
+    <mitre>
+        <id>T1105</id>
+        <id>T1505</id>
+    </mitre>
+</rule>

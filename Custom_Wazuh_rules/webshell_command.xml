@@ -1,0 +1,12 @@
+<group name="auditd, linux, webshell,">
+    <!-- This rule detects web shell command execution. -->
+    <rule id="100520" level="12">
+        <if_sid>80700</if_sid>
+        <field name="audit.key">webshell_command_exec</field>
+        <description>[Command execution ($(audit.exe))]: Possible web shell attack detected</description>
+        <mitre>
+            <id>T1505.003</id>
+            <id>T1059.004</id>
+        </mitre>
+    </rule>
+</group>

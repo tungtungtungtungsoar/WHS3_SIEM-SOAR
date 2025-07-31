@@ -1,0 +1,11 @@
+<!-- Modify it at your will. -->
+<group name="yara_webshell">
+    <rule id="100600" level="12">
+        <decoded_as>yara_detected</decoded_as>
+        <description>YARA: Webshell detected - $(rule) in $(file)</description>
+        <mitre>
+            <id>T1105</id>
+            <id>T1505</id>
+        </mitre>
+    </rule>
+</group>

@@ -1,0 +1,6 @@
+<decoder name="yara_detected">
+    <type>syslog</type>
+    <program_name>^yara_detected$</program_name>
+    <regex type="pcre2">^Rule=([^\s]+)\s+File=(\/\S+)$</regex>
+    <order>rule,file</order>
+</decoder>

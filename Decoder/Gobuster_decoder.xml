@@ -1,0 +1,6 @@
+<decoder name="apache-user-agent">
+    <prematch>HTTP/1.1|Mozilla|curl|gobuster</prematch>
+    <regex type="pcre2">^(\d+\.\d+\.\d+\.\d+) - - \[[^\]]+\] "\S+ (\S+) HTTP/\d\.\d" (\d{3}) \d+
+        "[^"]*" "([^"]+)"$</regex>
+    <order>srcip, url, status, user_agent</order>
+</decoder>

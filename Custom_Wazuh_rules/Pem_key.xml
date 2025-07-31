@@ -1,0 +1,10 @@
+<group name="audit,access,security">
+    <rule id="200100" level="10">
+        <if_sid>80700</if_sid> <!-- audit access rule -->
+        <match>/home/ubuntu/WHSkey.pem</match>
+        <description>Access to PEM key file detected</description>
+        <mitre>
+            <id>T1552.004</id>
+        </mitre>
+    </rule>
+</group>

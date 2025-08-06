@@ -1,15 +1,15 @@
 <!-- reverse shell agent 설정 참고-->
 
 <group name="webshell,">
-    <rule id="100510" level="10">
-        <description>Webshell Reverse Shell Connection Detected</description>
-        <match>webshell connections</match>
-        <options>no_full_log</options>
-    </rule>
+  <rule id="100510" level="10">
+    <description>Webshell Reverse Shell Connection Detected</description>
+    <match>webshell connections</match>
+    <options>no_full_log</options>
+  </rule>
 </group>
 
 
-<!-- wazuh agnet ossec.conf에 다음과 같은 설정 필요
+<!-- wazuh agent ossec.conf에 다음과 같은 설정 필요
 
 <localfile>
   <log_format>command</log_format>

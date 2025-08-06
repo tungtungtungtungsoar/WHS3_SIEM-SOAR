@@ -19,7 +19,7 @@
 ----
 
 ## 전체 인프라 구성
-<img width="2579" height="1289" alt="전체 인프라" src="https://github.com/user-attachments/assets/02f0eb54-1292-45f8-8268-33e577890c60" />
+<img width="2471" height="1132" alt="전체 인프라" src="https://github.com/user-attachments/assets/f368b8c8-0631-4fb3-9bd6-adcffadc7c18" />
 
 
 ---
